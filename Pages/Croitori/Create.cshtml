@@ -1,0 +1,15 @@
+﻿@page
+@model Scarlat_Iuga_ProiectWEB.Pages.Croitori.CreateModel
+
+<h1>Adaugă croitor</h1>
+
+<form method="post">
+    <label>Nume</label>
+    <input asp-for="Croitor.Nume" class="form-control" />
+
+    <label>Specializare</label>
+    <input asp-for="Croitor.Specializare" class="form-control" />
+
+    <br />
+    <button type="submit" class="btn btn-primary">Salvează</button>
+</form>

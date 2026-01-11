@@ -1,10 +1,29 @@
 ﻿@page
 @model IndexModel
-@{
-    ViewData["Title"] = "Home page";
-}
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<h1>Atelier de Croitorie</h1>
+<p>Alege o secțiune:</p>
+
+<div style="display: flex; gap: 20px; flex-wrap: wrap;">
+
+    <a asp-page="/Clienti/Index" class="btn btn-primary">
+        Clienți
+    </a>
+
+    <a asp-page="/Comenzi/Index" class="btn btn-primary">
+        Comenzi
+    </a>
+
+    <a asp-page="/Produse/Index" class="btn btn-primary">
+        Produse
+    </a>
+
+    <a asp-page="/Materiale/Index" class="btn btn-primary">
+        Materiale
+    </a>
+
+    <a asp-page="/Croitori/Index" class="btn btn-primary">
+        Croitori
+    </a>
+
 </div>

@@ -1,0 +1,22 @@
+﻿@page
+@model Scarlat_Iuga_ProiectWEB.Pages.Produse.EditModel
+
+<h1>Editare produs</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="Produs.ID" />
+
+    <label>Denumire</label>
+    <input asp-for="Produs.Denumire" class="form-control" />
+
+    <label>Dimensiuni</label>
+    <input asp-for="Produs.Dimensiuni" class="form-control" />
+
+    <label>Comanda</label>
+    <select asp-for="Produs.ComandaID"
+            asp-items="Model.ComandaList"
+            class="form-control"></select>
+
+    <br />
+    <button class="btn btn-primary">Salvează</button>
+</form>

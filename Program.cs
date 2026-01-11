@@ -1,7 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using Scarlat_Iuga_ProiectWEB.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+builder.Services.AddDbContext<AtelierContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("AtelierContext")));
 
 var app = builder.Build();
 

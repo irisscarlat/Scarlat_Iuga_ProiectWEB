@@ -1,0 +1,24 @@
+﻿@page
+@model Scarlat_Iuga_ProiectWEB.Pages.Comenzi.EditModel
+
+<h1>Editare comandă</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="Comanda.ID" />
+
+    <label>Data</label>
+    <input asp-for="Comanda.DataComanda" type="date" class="form-control" />
+
+    <label>Status</label>
+    <input asp-for="Comanda.Status" class="form-control" />
+
+    <label>Client</label>
+    <select asp-for="Comanda.ClientID" asp-items="Model.ClientList" class="form-control"></select>
+
+    <label>Croitor</label>
+    <select asp-for="Comanda.CroitorID" asp-items="Model.CroitorList" class="form-control"></select>
+
+    <br />
+    <button type="submit" class="btn btn-primary">Salvează</button>
+</form>
+

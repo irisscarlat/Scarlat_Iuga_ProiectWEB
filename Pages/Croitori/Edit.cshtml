@@ -1,0 +1,17 @@
+﻿@page
+@model Scarlat_Iuga_ProiectWEB.Pages.Croitori.EditModel
+
+<h1>Editare croitor</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="Croitor.ID" />
+
+    <label>Nume</label>
+    <input asp-for="Croitor.Nume" class="form-control" />
+
+    <label>Specializare</label>
+    <input asp-for="Croitor.Specializare" class="form-control" />
+
+    <br />
+    <button type="submit" class="btn btn-primary">Salvează</button>
+</form>

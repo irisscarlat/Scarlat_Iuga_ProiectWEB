@@ -1,0 +1,12 @@
+﻿@page
+@model Scarlat_Iuga_ProiectWEB.Pages.Croitori.DeleteModel
+
+<h1>Ștergere croitor</h1>
+
+<p>Ești sigur că vrei să ștergi <b>@Model.Croitor.Nume</b>?</p>
+
+<form method="post">
+    <input type="hidden" asp-for="Croitor.ID" />
+    <button type="submit" class="btn btn-danger">Șterge</button>
+    <a asp-page="Index">Anulează</a>
+</form>

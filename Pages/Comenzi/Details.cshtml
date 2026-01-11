@@ -1,0 +1,11 @@
+﻿@page
+@model Scarlat_Iuga_ProiectWEB.Pages.Comenzi.DetailsModel
+
+<h1>Detalii comandă</h1>
+
+<p><b>Data:</b> @Model.Comanda.DataComanda.ToShortDateString()</p>
+<p><b>Status:</b> @Model.Comanda.Status</p>
+<p><b>Client:</b> @Model.Comanda.Client?.Nume</p>
+<p><b>Croitor:</b> @Model.Comanda.Croitor?.Nume</p>
+
+<a asp-page="Index">Înapoi</a>

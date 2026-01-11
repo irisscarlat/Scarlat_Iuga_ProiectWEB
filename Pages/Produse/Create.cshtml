@@ -1,0 +1,28 @@
+﻿@page
+@model Scarlat_Iuga_ProiectWEB.Pages.Produse.CreateModel
+
+<h1>Adaugă produs</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label>Denumire</label>
+        <input asp-for="Produs.Denumire" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Dimensiuni</label>
+        <input asp-for="Produs.Dimensiuni" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Comandă</label>
+        <select asp-for="Produs.ComandaID"
+                asp-items="Model.ComandaList"
+                class="form-control">
+                <option value ="">-- Selecteaza comanda --</option>
+        </select>
+    </div>
+
+    <br />
+    <button type="submit" class="btn btn-primary">Salvează</button>
+</form>

@@ -1,0 +1,15 @@
+﻿@page
+@model Scarlat_Iuga_ProiectWEB.Pages.Materiale.CreateModel
+
+<h1>Adaugă material</h1>
+
+<form method="post">
+    <label>Denumire</label>
+    <input asp-for="Material.Denumire" class="form-control" />
+
+    <label>Preț pe metru</label>
+    <input asp-for="Material.Pret" class="form-control" />
+
+    <br />
+    <button class="btn btn-primary">Salvează</button>
+</form>

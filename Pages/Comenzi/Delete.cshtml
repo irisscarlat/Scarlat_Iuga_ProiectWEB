@@ -1,0 +1,12 @@
+﻿@page
+@model Scarlat_Iuga_ProiectWEB.Pages.Comenzi.DeleteModel
+
+<h1>Ștergere comandă</h1>
+
+<p>Sigur vrei să ștergi comanda?</p>
+
+<form method="post">
+    <input type="hidden" asp-for="Comanda.ID" />
+    <button type="submit" class="btn btn-danger">Șterge</button>
+    <a asp-page="Index">Anulează</a>
+</form>

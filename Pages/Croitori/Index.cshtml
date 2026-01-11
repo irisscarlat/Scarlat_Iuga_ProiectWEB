@@ -1,0 +1,32 @@
+﻿@page
+@model Scarlat_Iuga_ProiectWEB.Pages.Croitori.IndexModel
+
+<h1>Croitorie</h1>
+
+<p>
+    <a asp-page="Create">Adaugă croitor</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nume</th>
+            <th>Specializare</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Croitor)
+        {
+            <tr>
+                <td>@item.Nume</td>
+                <td>@item.Specializare</td>
+                <td>
+                    <a asp-page="Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-page="Details" asp-route-id="@item.ID">Detalii</a> |
+                    <a asp-page="Delete" asp-route-id="@item.ID">Șterge</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

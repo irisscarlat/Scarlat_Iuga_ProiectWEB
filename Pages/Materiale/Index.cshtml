@@ -1,0 +1,31 @@
+﻿@page
+@model Scarlat_Iuga_ProiectWEB.Pages.Materiale.IndexModel
+
+<h1>Materiale</h1>
+<p><a asp-page="Create">Adaugă material</a></p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Denumire</th>
+            <th>Tip</th>
+            <th>Preț / metru</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var m in Model.Material)
+        {
+            <tr>
+                <td>@m.Denumire</td>
+                <td>@m.Pret</td>
+                <td>
+                    <a asp-page="Edit" asp-route-id="@m.ID">Edit</a> |
+                    <a asp-page="Details" asp-route-id="@m.ID">Detalii</a> |
+                    <a asp-page="Delete" asp-route-id="@m.ID">Șterge</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

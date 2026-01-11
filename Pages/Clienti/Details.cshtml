@@ -1,0 +1,11 @@
+﻿@page
+@model Scarlat_Iuga_ProiectWEB.Pages.Clients.DetailsModel
+
+<h1>Client Details</h1>
+
+<p><b>Nume:</b> @Model.Client.Nume</p>
+<p><b>Email:</b> @Model.Client.Email</p>
+<p><b>Telefon:</b> @Model.Client.Telefon</p>
+
+<a asp-page="Edit" asp-route-id="@Model.Client.ID">Edit</a> |
+<a asp-page="Index">Back</a>

@@ -1,0 +1,12 @@
+﻿@page
+@model Scarlat_Iuga_ProiectWEB.Pages.Produse.DeleteModel
+
+<h1>Ștergere produs</h1>
+
+<p>Ești sigur că vrei să ștergi acest produs?</p>
+
+<form method="post">
+    <input type="hidden" asp-for="ID" />
+    <button class="btn btn-danger">Șterge</button>
+    <a asp-page="Index">Anulează</a>
+</form>

@@ -1,0 +1,22 @@
+﻿@page
+@model Scarlat_Iuga_ProiectWEB.Pages.Clients.EditModel
+
+<h1>Edit Client</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="Client.ID" />
+    <div class="form-group">
+        <label asp-for="Client.Nume"></label>
+        <input asp-for="Client.Nume" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Client.Email"></label>
+        <input asp-for="Client.Email" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Client.Telefon"></label>
+        <input asp-for="Client.Telefon" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+

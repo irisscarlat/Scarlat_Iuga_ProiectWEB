@@ -1,0 +1,36 @@
+﻿@page
+@model Scarlat_Iuga_ProiectWEB.Pages.Comenzi.IndexModel
+
+<h1>Comenzi</h1>
+
+<p>
+    <a asp-page="Create">Adaugă comandă</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Data</th>
+            <th>Status</th>
+            <th>Client</th>
+            <th>Croitor</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Comanda)
+        {
+            <tr>
+                <td>@item.DataComanda.ToShortDateString()</td>
+                <td>@item.Status</td>
+                <td>@item.Client?.Nume</td>
+                <td>@item.Croitor?.Nume</td>
+                <td>
+                    <a asp-page="Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-page="Details" asp-route-id="@item.ID">Detalii</a> |
+                    <a asp-page="Delete" asp-route-id="@item.ID">Șterge</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
